@@ -67,7 +67,7 @@ def extract_anim(armature: bpy.types.Armature, root_name: str) -> Animation:
 
     for frame in range(num_frames):
         
-        frame_time = framerange.x + frame * increment
+        frame_time = int(framerange.x + frame * increment)
         bpy.context.scene.frame_set(frame_time)
 
         for keyable_bone in keyable_bones:
